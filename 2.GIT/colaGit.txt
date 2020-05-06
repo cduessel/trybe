@@ -1,0 +1,15 @@
+git init
+
+touch README.md
+
+git add  readme.md -> coloca no staging
+
+git commit -m "descrição do commit"
+
+[ aí cria repositorio no github e pega a url ssh ]
+
+git remote add origin "URL_DO_REPOSITÓRIO";
+
+(testa se deu certo com: git remote -v )
+
+git push origin master

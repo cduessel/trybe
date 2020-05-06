@@ -1,0 +1,33 @@
+# cola CSS
+
+#colocar dentro da head embaixo do title <style>...</style>
+
+# para usar id é "id=xxx" e puxa no style com id="xxx"
+
+#pra usar class coloca a class="xyz" e puxa no style com ponto . ->para usar tudo que tem repetição
+
+#body {
+    background-color:rgb(37,37,37);
+}
+
+# p ou li {
+    font-family:"montserrat",sans-serrif;
+    font-size:45px;
+    font-weight:bold ou 600;
+    font-style:italic
+    font-spacing:-1px;
+   line-height:55px;
+    letter-spacing:
+    text-align:center;
+
+    text-decoration:none ou underline
+
+    padding:15px 30px; (1o top/bottom 2o lados)
+}
+
+# h1,h2,h3{
+    color:rgb(10,155,37)
+
+    para fotos dá para criar classe com-> border-radius:100% - bordas redondas (a partir de 50 já é redondo)
+
+https://www.w3schools.com/css/default.asp

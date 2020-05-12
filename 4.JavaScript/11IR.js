@@ -19,4 +19,4 @@ else { ir = (base*0.275)-869}
 
 let liq = (base - ir)
 
-console.log(liq)
+console.log("O salário líquido é: " + liq)

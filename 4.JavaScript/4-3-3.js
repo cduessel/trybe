@@ -1,24 +1,15 @@
 // Agora inverta o lado do triângulo.
 
-let n =5
-let asterisco = "*"
-let space = ""
+let n =5;
 
-let dois = ""
-
-   for(let i =1; i<=n; i++){
-        for (let j = 1; j<=n-i; j++){
-            space = space + "a";
-        }
-        
-
-        let dois = space + asterisco;
-
-        console.log(asterisco+space+asterisco)
+   for(let nlinha =1; nlinha <=n; nlinha +=1){
+       let linha ="";
+        for (let qespacos =(n-nlinha); qespacos>0; qespacos-=1){
+            linha += "a";
+        }                        
+        for (let star = 0; star <nlinha; star++){
+            linha += "*";}
+      
+    console.log(linha);
     }
-
-
-
-console.log(dois)
-
-
+    

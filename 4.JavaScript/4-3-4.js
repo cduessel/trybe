@@ -7,12 +7,12 @@
 let n = 5;
 let base = (n+1)/2;
 
-for(let linhas = 0; linhas < n; linhas+=1 ){
+for(let linhas = 1; linhas <= base; linhas+=1 ){
     let linha ="";
-    for(let spaces = (base-linhas); spaces>0; spaces+=1){
+    for(let spaces = (base-linhas); spaces>0; spaces-=1){
         linha = linha +"e";
-        }
-    for (let star = ((2*spaces)-linhas), star < n; star +=1){
+        };
+    for (let star = n-((base-linhas)*2); star>0; star -=1){
         linha = linha + "*";
     }
 console.log(linha)

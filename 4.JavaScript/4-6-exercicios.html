@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.5</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+     
+      let tit = document.createElement("h1");
+      document.body.appendChild(tit);
+
+      document.getElementsByTagName("h1")[0].innerHTML="Exercício 4.5 - JavaScript DOM"
+    
+      let divA = document.createElement("div");
+      divA.className ="main-content";
+      document.body.appendChild(divA);
+
+      let divN = document.createElement("div");
+      divN.className = "center-content";
+      document.getElementsByClassName("main-content")[0].appendChild(divN);
+
+      let pi = document.createElement("p");
+      pi.innerHTML = "algum texto #VQV!";
+      document.getElementsByClassName("center-content")[0].appendChild(pi);
+
+      let divL = document.createElement("div");
+      divL.className = "left-content";
+      document.getElementsByClassName("main-content")[0].appendChild(divL);
+
+      let divR = document.createElement("div");
+      divR.className = "right-content";
+      document.getElementsByClassName("main-content")[0].appendChild(divR);
+
+      let pic = document.createElement("img");
+      pic.className = "small-image";
+      document.getElementsByClassName("left-content")[0].appendChild(pic);
+      document.getElementsByTagName("img")[0].src="https://picsum.photos/200";
+
+      
+      let umdez = document.createElement("ul")
+      umdez.className = "lista";
+      document.getElementsByClassName("right-content")[0].appendChild(umdez);
+      
+      let array = ["um", "dois", "tres", "quatro", "cinco", "seis", "sete"];
+      for (let i = 0; i < array.length; i+=1){
+        let li = document.createElement("li");
+        li.innerHTML = array[i];
+        document.getElementsByClassName("lista")[0].appendChild(li);
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="parags">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="parags">Segundo parágrafo!</p>
+    
+    <style> .parags{ color:chartreuse }</style>
+    
+    <script>
+      var paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      
+      document.getElementById("page-title").innerHTML="cheech&chong";
+
+      document.getElementById("second-paragraph").innerHTML="Novo texto desse trem!";
+
+      var fonts = document.getElementsByClassName("parags")[0];
+      fonts.style.color = "blue";
+
+      var sub = document.getElementsByTagName("h4")[0];
+      sub.style.color = "red"
+
+    </script>
+  </body>
+</html>

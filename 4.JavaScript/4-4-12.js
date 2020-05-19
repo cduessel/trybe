@@ -1,19 +1,18 @@
 //Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N.
-
-let n = 5;
-
+let n = 7;
 function Soma(n){
-    let arrayS = [];
+    let arrayS = []
     for (let i = 1; i<=n; i++){
         arrayS[i] = i;
     }
+    
     let somatoria = 0
-for (j=0; j<arrayS.length; j++){
-    for(k=0; k<n;k++){
- somatoria = arrayS[j]+arrayS[k]}
-};
-
-return(soma);
-
+    for (let j=0; j<arrayS.length; j++){
+        if(arrayS[j]>0){
+    somatoria = somatoria + arrayS[j]
+    }}
+   
+    return(somatoria)
 }
+
 console.log(Soma(n))

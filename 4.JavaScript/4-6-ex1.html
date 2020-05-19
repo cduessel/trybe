@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="paiDoPai">
+        <div id="pai">
+          <div id="primeiroFilho">1o</div>
+          <div id="elementoOndeVoceEsta">
+            <div id="primeiroFilhoDoFilho">1o neto</div>
+            <div id="segundoEUltimoFilhoDoFilho">ultimo neto</div>
+          </div>
+          Atenção!
+          <div id="terceiroFilho">3o</div>
+          <div id="quartoEUltimoFilho">4o</div>
+        </div>
+      </div>
+
+    <script>
+     let pai = document.querySelector("#elementoOndeVoceEsta").parentNode;
+     pai.style.color = "red";
+     
+
+     let filhoDoFilho = document.querySelector("#primeiroFilhoDoFilho");
+     filhoDoFilho.innerHTML="textinho interno no filho do filho";
+
+     let filhodopai = document.querySelector("#pai").firstChild;
+    
+      let irmao = document.querySelector("#elementoOndeVoceEsta").previousSibling;
+
+      let atencao = document.querySelector("#elementoOndeVoceEsta").parentElement.innerHTML;
+     
+      let novoirmao = document.createElement("div");
+      novoirmao.innerHTML = "teste novo irmão! 5o?";
+
+      document.getElementById("pai").appendChild(novoirmao);
+
+      let novoneto = document.createElement("div");
+      document.getElementById("elementoOndeVoceEsta").appendChild(novoneto);
+
+      document.getElementById("elementoOndeVoceEsta").removeChild(novoneto);
+
+      let segundofilhodofilho = document.getElementById("segundoEUltimoFilhoDoFilho");
+      document.querySelector("#elementoOndeVoceEsta").removeChild(segundofilhodofilho);
+
+      let terceiro = document.getElementById("terceiroFilho");
+      document.getElementById("pai").removeChild(terceiro)
+
+      let vier = document.getElementById("quartoEUltimoFilho");
+      document.getElementById("pai").removeChild(vier);
+
+    </script>
+1
+</body>
+</html>

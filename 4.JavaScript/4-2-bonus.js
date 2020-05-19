@@ -8,8 +8,7 @@ for (let i = 1; i < numbers.length; i++) {
           let position = numbers[i];
           numbers[i] = numbers[j];
           numbers[j] = position;
-        
-      
+              
          }
       }
 }

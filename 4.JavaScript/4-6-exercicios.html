@@ -58,7 +58,6 @@
     <script>
      
       let tit = document.createElement("h1");
-      tit.className = "title";
       document.body.appendChild(tit);
 
       document.getElementsByTagName("h1")[0].innerHTML="Exercício 4.5 - JavaScript DOM"
@@ -113,9 +112,10 @@
       green.style.backgroundColor = "green";
 
       document.getElementsByClassName("lista")[0].removeChild(document.getElementsByClassName("lista")[0].lastChild);
-
       document.getElementsByClassName("lista")[0].removeChild(document.getElementsByClassName("lista")[0].lastChild);
+      
 
+      document.getElementsByTagName("h1")[0].className = "title";
 
     </script>
   </body>

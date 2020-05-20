@@ -58,6 +58,7 @@
     <script>
      
       let tit = document.createElement("h1");
+      tit.className = "title";
       document.body.appendChild(tit);
 
       document.getElementsByTagName("h1")[0].innerHTML="Exercício 4.5 - JavaScript DOM"
@@ -92,12 +93,29 @@
       umdez.className = "lista";
       document.getElementsByClassName("right-content")[0].appendChild(umdez);
       
-      let array = ["um", "dois", "tres", "quatro", "cinco", "seis", "sete"];
+      let array = ["um", "dois", "tres", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
       for (let i = 0; i < array.length; i+=1){
         let li = document.createElement("li");
         li.innerHTML = array[i];
         document.getElementsByClassName("lista")[0].appendChild(li);
       }
+      for (let i = 0; i < 3; i++){
+        let h3 = document.createElement("h3");
+        h3.className = "description"; 
+        document.getElementsByClassName("center-content")[0].appendChild(h3);
+      }
+      document.getElementsByClassName("main-content")[0].removeChild(document.getElementsByClassName("left-content")[0]);
+
+      let rm = document.getElementsByClassName("right-content")[0];
+      rm.style.marginRight = "auto";
+
+      let green = document.getElementsByClassName("center-content")[0];
+      green.style.backgroundColor = "green";
+
+      document.getElementsByClassName("lista")[0].removeChild(document.getElementsByClassName("lista")[0].lastChild);
+
+      document.getElementsByClassName("lista")[0].removeChild(document.getElementsByClassName("lista")[0].lastChild);
+
 
     </script>
   </body>

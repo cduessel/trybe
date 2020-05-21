@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Titulo</h1>
+
+    <p>blablablablabla</p>
+   
+   <script>
+
+        let title = document.getElementsByTagName("h1")[0];
+        title.id = "titulo"; 
+        document.getElementById("titulo").innerHTML = "Titulo da Pagina";
+
+        let sub = document.createElement("h2");
+        sub.id = "sub";
+        document.getElementById("titulo").appendChild(sub)
+        sub.addEventListener("click", function(){alert("PARABINS!")})
+
+        document.getElementById("sub").innerHTML = "subtitulo"
+
+        let btn = document.createElement("button")
+        btn.id='botao';
+        btn.innerHTML="clique aqui"
+        document.querySelector("p").appendChild(btn)
+
+        btn.addEventListener("click", function(){console.log("PARABINS!"+"2"*"2")})
+
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: darkslategray;
+    color: blanchedalmond;
+}
+
+h1 {
+    text-align: center;
+}
+
+.formTudo {
+    align-content: initial;
+    font-size: larger;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+    padding: 10px;
+}
+
+.dados-pessoais {
+}

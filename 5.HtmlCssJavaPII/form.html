@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de CVs</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+</head>
+<body>
+  <header>
+    <h1>Cadastre seu CV aqui:</h1>
+  </header>
+  <form action="" method="GET" class="formTudo">
+    <fieldset class="dados pessoais">
+      <legend>Dados Pessoais:</legend>
+        <label for="nome">Nome Completo</label>
+        <input name="nome" id="nome" type="text" maxlength="40" required />
+        <label for="email">E-mail</label>
+        <input name="email" id="email" type="email" maxlength="50" required placeholder="texto@texto.texto" />
+        <label for="cpf">CPF</label>
+        <input name="pf" id="cpf" type="number" maxlength="11" required placeholder="111.111.111-11" pattern="(){3}.(){3}.(){3}-(){2}" />
+        <label for="end">Endereço</label>
+        <input name="end" id="end" type="text" maxlength="200" required />
+        <label for="cid">Cidade</label>
+        <input name="cid" id="cid" type="text" maxlength="28" required />
+        <label for="est">Estado</label>
+          <select id="est" name="estados" required>
+          <option value="acre" selected>Acre</option>
+          <option value="amapa">Amapá</option>
+        </select>
+        <label for="tipo">Tipo</label>
+        <input name="tipo" id="ap" type="radio" value="Apartamento"/>
+        <label for="ap">Apartamento</label>
+        <input name="tipo" id="casa" type="radio" value="Casa"/>
+        <label for="casa">Casa</label>      
+    </fieldset>
+    <fieldset class=job>
+      <legend>Experiência profissional:</legend>
+      <label for >Resumo de sua experiência:</label>
+      <textarea required maxlength="1000" placeholder="conte aqui sua experiencia em até 1000caracteres" cols="20" rows="10"></textarea>
+      <label for="ljob">Ultimo cargo</label>
+      <input type="text" required maxlength="40" name="ljob" id="ljob">
+      <label for="descricao">Descrição do cargo</label>
+      <textarea name="descricao" id="descricao" cols="20" rows="10" required maxlength="500"></textarea>
+      <label for="dinicio">Data de inicio:</label>
+      <input type="date" name="dinicio" id="dinicio" required>
+    </fieldset>
+    <button type="submit">enviar pra url</button>
+    <button type="button" id="btn">Enviar pra onde?</button>
+    <button type="reset">Limpar formulário</button>
+  </form>
+
+    
+</body>
+</html>

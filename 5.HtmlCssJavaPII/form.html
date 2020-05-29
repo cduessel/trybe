@@ -4,30 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de CVs</title>
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen"> 
 </head>
 <body>
   <header>
     <h1>Cadastre seu CV aqui:</h1>
   </header>
   <form action="" method="GET" class="formTudo">
-    <fieldset class="dados pessoais">
+    <fieldset class="dados-pessoais">
       <legend>Dados Pessoais:</legend>
         <label for="nome">Nome Completo</label>
         <input name="nome" id="nome" type="text" maxlength="40" required />
         <label for="email">E-mail</label>
         <input name="email" id="email" type="email" maxlength="50" required placeholder="texto@texto.texto" />
         <label for="cpf">CPF</label>
-        <input name="pf" id="cpf" type="number" maxlength="11" required placeholder="111.111.111-11" pattern="(){3}.(){3}.(){3}-(){2}" />
+        <input name="cpf" id="cpf" type="text" maxlength="11" required placeholder="111.111.111-11" pattern="[0-9]{3}[0-9]{3}[0-9]{3}-[0-9]{2}" \ />
         <label for="end">Endereço</label>
         <input name="end" id="end" type="text" maxlength="200" required />
         <label for="cid">Cidade</label>
         <input name="cid" id="cid" type="text" maxlength="28" required />
         <label for="est">Estado</label>
           <select id="est" name="estados" required>
-          <option value="acre" selected>Acre</option>
-          <option value="amapa">Amapá</option>
-        </select>
+                  </select>
         <label for="tipo">Tipo</label>
         <input name="tipo" id="ap" type="radio" value="Apartamento"/>
         <label for="ap">Apartamento</label>
@@ -46,10 +44,13 @@
       <input type="date" name="dinicio" id="dinicio" required>
     </fieldset>
     <button type="submit">enviar pra url</button>
-    <button type="button" id="btn">Enviar pra onde?</button>
+    <button type="button" id="btn">Mostrar resumo embaixo:</button>
     <button type="reset">Limpar formulário</button>
   </form>
-
-    
+  <div class="resumo">
+  <h2>Resumo de dados:</h2>
+    <p id="resumo"></p>
+  </div>
+<script src="script.js"></script>
 </body>
 </html>

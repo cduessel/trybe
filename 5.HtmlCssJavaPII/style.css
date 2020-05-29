@@ -20,6 +20,7 @@ h1 {
     margin-top: 2%;
     padding: 10px;
 }
-
-.dados-pessoais {
+.resumo {
+    margin-left: 20%;
+    text-align: center;
 }

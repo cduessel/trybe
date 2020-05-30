@@ -1,6 +1,6 @@
 // window.onload = alert ("scripto!")
 
-window.JustValidate('.js-form');
+// window.JustValidate('.js-form');
 
 const estados = ['selecione aqui o seu','Acre','Alagoas','Amapá','Amazonas','Bahia','Ceará','Distrito Federal','Espírito Santo',
 'Goiás','Maranhão','Mato Grosso','Mato Grosso do Sul','Minas Gerais','Pará','Paraíba','Paraná','Pernambuco',
@@ -19,9 +19,11 @@ let dados = document.getElementsByTagName('input');
 
 function resumodetd(){
     for (let j = 0; j < dados.length; j += 1){
-        let infos = infos && dados[j].value; 
+        let res = document.createElement("li");
+        res.innerHTML = dados[j].value;
+        res.className= "list-group-item";
+        document.getElementById('restop').appendChild(res);
     };
-
-    document.getElementById('resumo').innerHTML = infos };
+ };
     
 document.getElementById('btn').addEventListener('click', resumodetd)

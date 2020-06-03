@@ -1,0 +1,61 @@
+body {
+	margin:1%;
+	font-size: 1.5em;
+
+}
+h1 { 
+	font-size: large;
+}
+h2 {
+
+}
+
+p {
+	text-align: justify;
+}
+
+img {
+	max-width: 100%;
+}
+
+figure {
+	margin: 0;
+	padding-bottom: 20px;
+}
+
+@media only screen and (min-width:768px){
+		body {
+		background-color: navy;
+		color:white;
+		margin: auto;
+		font-size: 1em;
+		}
+	h1 {
+		font-size: x-large;
+	}
+	.contentbox {
+		width: 80%;
+		margin:auto;	
+	}
+
+	.figbox {
+		display:flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		
+			}
+	figure {
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width:1000px){
+	body {
+		background-color: lightslategray;
+		color:navy;
+		margin: auto;
+		font-size: 1em;
+		width: 80%;
+		}
+
+}

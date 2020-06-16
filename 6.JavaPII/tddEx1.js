@@ -58,6 +58,7 @@
 // assert.strictEqual(typeof addAllnumbers, 'function');
 // assert.strictEqual(output, expected);
 
+// ex 4
 // const assert = require('assert');
 // // escreva a função findTheNeedle para passar nos testes abaixo:
 // function findTheNeedle(arraiah, palavra) {
@@ -85,6 +86,7 @@
 // // assert.strictEqual(output, expected);
 // const assert = require('assert');
 
+// ex5
 // function greetPeople(people) {
 //     let greeting = [];  
 //     for(let person = 0; person < people.length; person += 1) {
@@ -107,33 +109,87 @@
     Lembre-se: testes pequenos e numerosos! Escreva um por vez e vá corrigindo
     a função aos poucos:
 */
+// // ex6
+// const assert = require('assert');
+
+// function removeVowels(word) {
+//     const characters = word.split('');
+//     let results = [];
+//     let nums = 0;
+
+  
+//     for (let i = 0; i < characters.length; i += 1) {
+//       if (
+//         characters[i] === 'a' ||
+//         characters[i] === 'o' ||
+//         characters[i] === 'i' ||
+//         characters[i] === 'e' ||
+//         characters[i] === 'u'
+//       ) {
+//         nums += 1;
+//         results += nums;
+//       } else {
+//         results += characters[i];
+//       }
+//     }
+//     return results;
+//   };    
+    
+//   const parameter = 'Dayane';
+//   const result = 'D1y2n3';
+//   testz = removeVowels(parameter)
+  
+//   assert.equal(typeof(removeVowels), "function", "faltou function");
+//   assert.strictEqual(testz, result, "deu ruim");
+
+// // ex7
+  /*
+    Use a variável parameter como parâmetro da função acima, escreva testes
+    para verificar se a mesma está retornando a como se vê na variável result
+    e, caso não esteja, altere o código para que ele passe nos testes.
+    Lembre-se: testes pequenos e numerosos! Escreva um por vez e vá corrigindo
+    a função aos poucos:
+  */
 const assert = require('assert');
 
-function removeVowels(word) {
-    const characters = word.split('');
-    const results = [];
+//   const greaterThanTen = (array) => {
+//     let results = [];
+//     for (let i = 0; i < array.length; i += 1) {
+//       if (array[i] > 10) {
+//         results.push(array[i]);
+//       }
+//     }
+//     return results;
+//   };
   
-    for (let i = 0; i < characters.length; i += 1) {
-      if (
-        characters[i] === 'a' ||
-        characters[i] === 'o' ||
-        characters[i] === 'i' ||
-        characters[i] === 'e' ||
-        characters[i] === 'u'
-      ) {
-        results.push(i);
-      } else {
-        results.push(characters[i]);
-      }
-    }
-    let resultato = results.join ;
-    return resultato;
-  };    
-    
-  const parameter = 'Dayane';
-  const result = 'D1y2n3';
-  testz = removeVowels(parameter)
-  console.log(testz) 
+//   const parameter = [4, 10, 32, 9, 21];
+//   const result = [32, 21];
 
-  assert.equal(typeof(removeVowels), "function", "faltou function");
-  assert.deepEqual()
+//   assert.equal(typeof(greaterThanTen), "function", "faltou function");
+//   assert.deepEqual(greaterThanTen(parameter), result, "deu ruim")
+
+ //ex8
+/*
+  Use a variável parameter como parâmetro da função acima, escreva testes
+  para verificar se a mesma está retornando a como se vê na variável result
+  e, caso não esteja, altere o código para que ele passe nos testes.
+  Lembre-se: testes pequenos e numerosos! Escreva um por vez e vá corrigindo
+  a função aos poucos:
+*/
+
+
+ function secondThirdSmallest(array) {
+    let results = []
+    array.sort(function (x, y) {
+        return x > y;
+    });
+    results = [array[1], array[2]];
+    return results;
+};
+
+const parameter = [4, 10, 32, 9, 21, 90, 5, 11, 8, 6];
+const result = [5, 6];
+
+assert.equal(typeof(secondThirdSmallest), "function", "faltou function");
+assert.deepEqual(secondThirdSmallest(parameter), result, "deu ruim")
+

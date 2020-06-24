@@ -77,4 +77,13 @@ describe.skip('Testes arquivos calcs e array', () => {
         expect(thereIs).toBeDefined()
     })
 
+    test('exerciocio10: objetos', () => {
+        expect(exercicios.obj1).toEqual(exercicios.obj2)
+        expect(exercicios.obj1).not.toEqual(exercicios.obj3)
+    })
+    test('exercicio11: maior que', () => {
+        expect(exercicios.isAbove(2, 1)).toBe(true)
+        expect(exercicios.isAbove(1, 2)).toBe(false)
+    })
+
   })

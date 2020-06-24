@@ -59,7 +59,26 @@ if (num % 3 === 0) return 'fizz';
 if (num % 5 === 0) return 'buzz';
 return num;
 }
-  
+
+const obj1 = {
+  title: 'My Title',
+  description: 'My Description',
+};
+
+const obj2 = {
+  description: 'My Description',
+  title: 'My Title',
+};
+
+const obj3 = {
+  title: 'My Different Title',
+  description: 'My Description',
+};
+
+function isAbove(num1, num2) {
+  return num1 > num2;
+}
+
 
 module.exports = {
     sum,
@@ -67,5 +86,9 @@ module.exports = {
     mySum,
     myRemove,
     myRemoveWithoutCopy,
-    myFizzBuzz
+    myFizzBuzz,
+    obj1,
+    obj2,
+    obj3,
+    isAbove
   }

@@ -39,6 +39,42 @@ describe.skip('Testes arquivos calcs e array', () => {
     test('exercicio1: soma', () => {
         expect(exercicios.sum(4, 5)).toEqual(9)
         expect(exercicios.sum(0, 0)).toEqual(0)
-        expect(exercicios.sum(4, "5")).toThrow(“parameters must be numbers”)
+        expect(() => {exercicios.sum(4, "5")}).toThrow()
+        expect(() => {exercicios.sum(4, "5")}).toThrow('parameters must be numbers')
     })
+    
+    test('exercicio2: myIndex', () => {
+        expect(exercicios.myIndexOf([1, 2, 3, 4], 3)).toBe(2)
+        expect(exercicios.myIndexOf([1, 2, 3, 4], 5)).toEqual(-1)
+    })
+    test('exercicio3: mySumarray', () => {
+        expect(exercicios.mySum([1, 2, 3, 4])).toBe(10)
+        expect(exercicios.mySum([1, -2, -3, 4])).toEqual(0)
+    })
+    test('exercicio4: myRemove', () => {
+        expect(exercicios.myRemove([1, 2, 3, 4], 3)).not.toContain(3)
+        expect(exercicios.myRemove([1, 2, 3, 4], 3)).not.toBe([1, 2, 3, 4])
+        expect(exercicios.myRemove([1, 2, 3, 4], 5)).toContain(1, 2, 3, 4)
+    })
+    test('exercicio5: myRemoveWithouCopy', () => {
+        expect(exercicios.myRemoveWithoutCopy([1, 2, 3, 4], 3)).not.toContain(3)
+        expect(exercicios.myRemoveWithoutCopy([1, 2, 3, 4], 3)).not.toBe([1, 2, 3, 4])
+        expect(exercicios.myRemoveWithoutCopy([1, 2, 3, 4], 5)).toContain(1, 2, 3, 4)
+    })
+    test('exercicio6: myMyFizzBuzz', () => {
+        expect(exercicios.myFizzBuzz(15)).toBe('fizzbuzz')
+        expect(exercicios.myFizzBuzz(3)).toBe('fizz')
+        expect(exercicios.myFizzBuzz(5)).toBe('buzz')
+        expect(exercicios.myFizzBuzz(7)).toBe(7)
+        expect(exercicios.myFizzBuzz("K")).toBe(false)
+    })
+    test('exerciocio7: var definida', () => {
+        const thereIs = '';
+        expect(thereIs).toBeDefined()
+    })
+    test('exerciocio8: função definida', () => {
+        function thereIs() {}
+        expect(thereIs).toBeDefined()
+    })
+
   })
